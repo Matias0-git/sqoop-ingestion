@@ -12,6 +12,7 @@
 * **Problema Común:** Intentar ejecutar el comando `\dt` directamente en la terminal sin estar dentro del cliente de `psql`.
 * **Solución:** Primero se debe acceder al cliente de PostgreSQL (`psql`) y luego ejecutar los comandos internos.
 
+![Mi imagen](../sqoop-ingestion/imagenes/image%201.png)
 ---
 
 ### 2) Mostrar los clientes de Argentina
@@ -34,6 +35,8 @@
     * **Error de Case Sensitivity:** Utilizar `WHERE "Country" = 'Argentina'` en lugar de `WHERE country = 'Argentina'`. PostgreSQL maneja los nombres de columnas sin comillas en minúscula por defecto.
 * **Solución:** Se corrigió la consulta para usar el nombre de columna en minúscula (`country`) para que coincidiera con la convención de PostgreSQL.
 
+![Mi imagen](../sqoop-ingestion/imagenes/image%202.png)
+
 ---
 
 ### 3) Importar la tabla `orders` completa a HDFS
@@ -53,6 +56,9 @@
     ```
 * **Problema Común:** Los errores de sintaxis en el comando de Sqoop, como olvidar los `\`, lo que causa que los argumentos se interpreten incorrectamente.
 * **Solución:** Se verificó que cada argumento estuviera en una nueva línea y terminara con un `\` para una correcta ejecución.
+
+![Mi imagen](../sqoop-ingestion/imagenes/image%203%201.png)
+![Mi imagen](../sqoop-ingestion/imagenes/image%203%202.png)
 
 ---
 
@@ -78,3 +84,5 @@
 * **Solución:** Se corrigieron tanto el nombre de la tabla como el de la columna a sus respectivas versiones en minúscula para que coincidieran con el esquema de la base de datos de PostgreSQL.
 
 
+![Mi imagen](../sqoop-ingestion/imagenes/image%204%201.png)
+![Mi imagen](../sqoop-ingestion/imagenes/image%204%202.png)
